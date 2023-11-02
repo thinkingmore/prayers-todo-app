@@ -2,8 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = 5000; 
+const cors = require("cors")
 
+//middleware
 app.use(bodyParser.json());
+app.use(cors());
 
 let tasks = [
   { id: 1, title: 'Make Breakfast', description: 'Make bread and egg omelete,then make tea.', state: 'todo' },
