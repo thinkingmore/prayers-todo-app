@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import TaskList from './components/TaskList';
 import { useTaskContext } from './TaskContext';
+import TaskForm from './components/TaskForm';
 
 function App() {
   const [activeTab, setActiveTab] = useState('todo');
@@ -51,7 +52,10 @@ function App() {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
-        <h1>Daily Task</h1>
+      <h1>Task Manager</h1> 
+        <div>
+          <TaskForm/>
+        </div>
         <div className="task-list">
           <div className="columns">
             <TaskList activeTab="todo" />

@@ -8,11 +8,9 @@ function TaskItem({ task, index, onMoveTask }) {
   };
 
 
-// convert draggable id to string
-let dId = task.id.toString();
 
   return (
-    <Draggable draggableId={dId} index={index}>
+    <Draggable draggableId={task.id} index={index}>
       {(provided) => (
         <div
           className={`task-item task-item-${task.state}`}
@@ -20,7 +18,7 @@ let dId = task.id.toString();
           {...provided.draggableProps}
           {...provided.dragHandleProps}
         >
-          <h3>{task.title}</h3>
+          <h4>{task.title}</h4>
           <p>{task.description}</p>
           <div className="task-controls">
             <button className="task-btn btn-pending" onClick={() => handleMoveTask('todo')}>Pending</button>

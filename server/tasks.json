@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "title": "Make Breakfast",
+    "description": "Make bread and egg omelette, then make tea.",
+    "state": "in-progress"
+  },
+  {
+    "id": "2",
+    "title": "Exercise",
+    "description": "Do push-ups, squats, crunch, plank, and lunges.",
+    "state": "done"
+  },
+  {
+    "id": "3",
+    "title": "Take shower",
+    "description": "Take a shower with cold water and change clothes",
+    "state": "todo"
+  },
+  {
+    "id": "1698989822091-724",
+    "title": "Watch tv",
+    "description": "watch latest tv news",
+    "state": "done"
+  },
+  {
+    "id": "1698990022747-292",
+    "title": "Go for a walk",
+    "description": "Take a walk for 20 minutes",
+    "state": "todo"
+  },
+  {
+    "id": "1698990208507-97",
+    "title": "Read daily tasks",
+    "description": "read email and daily tasks update",
+    "state": "done"
+  },
+  {
+    "id": "1698990444643-728",
+    "title": "Clean the room",
+    "description": "Do some cleaning and then complete the rest of the tasks in the list",
+    "state": "in-progress"
+  }
+]
