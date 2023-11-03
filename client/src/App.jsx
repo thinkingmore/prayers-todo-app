@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { DragDropContext } from 'react-beautiful-dnd';
 import TaskList from './components/TaskList';
+import { useTaskContext } from './TaskContext';
 
 function App() {
   const [activeTab, setActiveTab] = useState('todo');
+  const { state, dispatch } = useTaskContext();
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
@@ -28,7 +30,7 @@ function App() {
       dispatch({ type: 'SET_TASKS', payload: updatedTasks });
 
       // Send a request to update the task status on the backend
-      fetch(`/tasks/${result.draggableId}`, {
+      fetch(`http://localhost:5000/tasks/${result.draggableId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -49,7 +51,7 @@ function App() {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
-        <h1>React Todo App</h1>
+        <h1>Daily Task</h1>
         <div className="task-list">
           <div className="columns">
             <TaskList activeTab="todo" />

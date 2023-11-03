@@ -52,6 +52,14 @@ function TaskList({ activeTab }) {
              ref={provided.innerRef}
              {...provided.droppableProps}
         >
+          <h2>  
+            {activeTab === 'todo'
+              ? "Pending"
+              : activeTab === 'in-progress'
+                ? "Progress"
+                : "Complete"
+            }
+          </h2>
           {tasks.map((task, index) => (
             <TaskItem key={task.id} task={task} index={index} onMoveTask={moveTask} />
           ))}
